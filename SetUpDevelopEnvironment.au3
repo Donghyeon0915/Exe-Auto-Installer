@@ -19,8 +19,8 @@ Func setupZuluJDK()
 EndFunc
 
 Func setupGit()
-	Local $posX[22] = [1031, 1115, 1031, 1084, 1113, 1097, 1097, 1107, 1051, 1117, 1106, 1113, 1113 ,1078, 1104, 1116, 1116,1116,1098, 898, 896, 1073]
-	Local $posY[22] = [ 593, 598,  593,  613,  612,  611,  611,  612,  594,  612,  611,  604,  604,  612,  618,  604,  612, 604, 593,  514, 493, 690]
+	Local $posX[23] = [1031, 1115, 1031, 1113, 1084, 1113, 1097, 1097, 1107, 1051, 1117, 1106, 1113, 1113 ,1078, 1104, 1116, 1116, 1116, 1098, 898, 896, 1073]
+	Local $posY[23] = [ 593, 598,  593,  596,  613,  612,  611,  611,  612,  594,  612,  611,  604,  604,  612,  618,  604,  612,  604,  593,  514, 493, 690]
 	Local $texts[13];
 
 	$texts[0] = "When you are ready to continue with Setup, click Next."
@@ -43,7 +43,7 @@ Func setupGit()
 	Local $hWnd = WinWait("[CLASS:#32770]", "확인", 5)
 
 	if $hWnd <> 0 Then
-		For $i=0 To 2
+		For $i=0 To 3
 			MouseClick("LEFT", $posX[$i], $posY[$i])
 		Next
 	EndIf
@@ -57,7 +57,7 @@ Func setupGit()
 
 	Local $hWnd = WinWait("[CLASS:#32770]", "확인", 50)
 
-	For $i=3 To 21
+	For $i=4 To 22
 		MouseClick("LEFT", $posX[$i], $posY[$i])
 	Next
 
